@@ -1,0 +1,16 @@
+{
+    "id": "${project.groupId}:${project.artifactId}:slingfeature:http:${project.version}",
+    "variables": {
+        "${project.groupId}:${project.artifactId}.http.port":"8080"
+    },
+    "bundles": [
+        "org.apache.felix:org.apache.felix.http.servlet-api:1.1.2",
+        "org.apache.felix:org.apache.felix.http.jetty:4.0.0"
+    ],
+    "configurations": {
+        "org.apache.felix.http": {
+            "org.osgi.service.http.port": "${${project.groupId}:${project.artifactId}.http.port}"
+        }
+    }
+    
+}

@@ -1,0 +1,8 @@
+{
+    "id": "${project.groupId}:${project.artifactId}:slingfeature:configuration:${project.version}",
+    "bundles": [
+        "org.apache.felix:org.apache.felix.log:1.0.1",
+        "org.apache.felix:org.apache.felix.configadmin:1.9.2",
+        "org.apache.felix:org.apache.felix.metatype:1.2.0"
+    ]
+}
