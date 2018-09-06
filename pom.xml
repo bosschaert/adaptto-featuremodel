@@ -28,9 +28,6 @@
   <artifactId>org.apache.sling.adaptto.featuremodel.example</artifactId>
   <version>0.0.1</version>
   <name>Adaptto feature model example</name>
-  <description>
-	  Installs packages into a JCR repository as SlingRepositoryInitializer based on a FileVault ExecutionPlan
-  </description>
 
     <build>
         <plugins>
