@@ -61,6 +61,7 @@
                             <features>
                                 <directory>
                                     <location>${basedir}/src/main/features</location>
+                                    <excludes>gogo.json</excludes>
                                 </directory>
                             </features>
                        </configuration>
