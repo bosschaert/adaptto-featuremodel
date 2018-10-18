@@ -28,6 +28,7 @@
   <artifactId>org.apache.sling.adaptto.featuremodel.example</artifactId>
   <version>0.0.1</version>
   <name>Adaptto feature model example</name>
+  <packaging>slingfeature</packaging>
 
     <build>
         <plugins>
@@ -35,21 +36,8 @@
                 <groupId>org.apache.sling</groupId>
                 <artifactId>slingfeature-maven-plugin</artifactId>
                 <version>0.2.0-SNAPSHOT</version>
+                <extensions>true</extensions>
                 <executions>
-                    <execution>
-                        <id>gen-res</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>generate-resources</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>process-features</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>attach-features</goal>
-                        </goals>
-                    </execution>
                     <execution>
                         <id>aggregate-base-feature</id>
                         <phase>generate-resources</phase>
@@ -57,13 +45,13 @@
                             <goal>aggregate-features</goal>
                         </goals>
                         <configuration>
-                            <classifier>webconsole.http</classifier>
-                            <features>
+                            <aggregateClassifier>webconsole.http</aggregateClassifier>
+                            <aggregates>
                                 <directory>
-                                    <location>${basedir}/src/main/features</location>
+                                    <includes>*.json</includes>
                                     <excludes>gogo.json</excludes>
                                 </directory>
-                            </features>
+                            </aggregates>
                        </configuration>
                     </execution>
                 </executions>
