@@ -25,9 +25,9 @@
     <relativePath />
   </parent>
 
-  <artifactId>org.apache.sling.adaptto.featuremodel.example</artifactId>
+  <artifactId>org.apache.sling.featuremodel.example</artifactId>
   <version>0.0.1</version>
-  <name>Adaptto feature model example</name>
+  <name>Feature model example</name>
   <packaging>slingfeature</packaging>
 
     <build>
