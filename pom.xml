@@ -57,17 +57,14 @@
                 </executions>
             </plugin>
             <plugin>
-            <groupId>org.apache.rat</groupId>
-            <artifactId>apache-rat-plugin</artifactId>
-            <configuration>
-                <excludes>
-                    <exclude>readme.md</exclude>
-                    <exclude>src/main/resources/META-INF/services/**</exclude>
-                    <exclude>**/*.properties</exclude>
-                    <exclude>launcher/**</exclude>
-                    <exclude>base/**</exclude>
-                </excludes>
-            </configuration>
+                <groupId>org.apache.rat</groupId>
+                <artifactId>apache-rat-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>readme.md</exclude>
+                        <exclude>launcher/**</exclude>
+                    </excludes>
+                </configuration>
             </plugin>
         </plugins>
     </build>
