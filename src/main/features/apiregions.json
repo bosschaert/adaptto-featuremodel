@@ -1,0 +1,6 @@
+{
+    "id": "${project.groupId}:${project.artifactId}:slingfeature:apiregions:${project.version}",
+    "bundles": [
+        "org.apache.sling:org.apache.sling.feature.apiregions:0.0.1-SNAPSHOT"
+    ]
+}
