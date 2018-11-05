@@ -28,14 +28,14 @@
   <artifactId>org.apache.sling.featuremodel.example</artifactId>
   <version>0.0.1</version>
   <name>Feature model example</name>
-  <packaging>slingfeature</packaging>
+  <packaging>slingosgifeature</packaging>
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>slingfeature-maven-plugin</artifactId>
-                <version>0.2.0-SNAPSHOT</version>
+                <version>0.2.1-SNAPSHOT</version>
                 <extensions>true</extensions>
                 <executions>
                     <execution>
