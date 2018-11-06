@@ -11,8 +11,7 @@
                 "org.objectweb.asm.commons",
                 "org.apache.aries.util.manifest"
             ],
-            "name":"global",
-            "org-feature":"${project.groupId}:${project.artifactId}:slingfeature:asm:${project.version}"
+            "name":"global"
         }
     ]    
 }

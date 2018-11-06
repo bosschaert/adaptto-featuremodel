@@ -55,7 +55,6 @@ under the License.
                         </configuration>
                     </execution>
                 </executions>
-                <!-- 
                 <dependencies>
                     <dependency>
                         <groupId>org.apache.sling</groupId>
@@ -63,7 +62,6 @@ under the License.
                         <version>0.0.1-SNAPSHOT</version>
                     </dependency>
                 </dependencies>
-                 -->                
             </plugin>
             <plugin>
                 <groupId>org.apache.rat</groupId>
