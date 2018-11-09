@@ -45,7 +45,6 @@ under the License.
                             <goal>aggregate-features</goal>
                         </goals>
                         <configuration>
-                            <aggregateClassifier>webconsole.http</aggregateClassifier>
                             <aggregates>
                                 <directory>
                                     <includes>*.json</includes>
