@@ -45,11 +45,9 @@ under the License.
                             <goal>aggregate-features</goal>
                         </goals>
                         <configuration>
-                            <aggregateClassifier>webconsole.http</aggregateClassifier>
                             <aggregates>
                                 <directory>
-                                    <includes>*.json</includes>
-                                    <excludes>gogo.json</excludes>
+                                    <filesInclude>*.json</filesInclude>
                                 </directory>
                             </aggregates>
                         </configuration>
