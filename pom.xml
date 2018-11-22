@@ -48,6 +48,7 @@ under the License.
                             <aggregates>
                                 <directory>
                                     <filesInclude>*.json</filesInclude>
+                                    <filesExclude>gogo.json</filesExclude>
                                 </directory>
                             </aggregates>
                         </configuration>
