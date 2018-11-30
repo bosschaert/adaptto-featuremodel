@@ -10,9 +10,14 @@
     "api-regions:JSON|false":[
         {
             "exports":[
-                "org.objectweb.asm",
-                "org.objectweb.asm.commons",
                 "org.apache.aries.util.manifest"
+            ],
+            "name":"deprecated"
+        },
+        {
+            "exports":[
+                "org.objectweb.asm",
+                "org.objectweb.asm.commons"
             ],
             "name":"internal"
         }

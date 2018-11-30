@@ -35,32 +35,49 @@ under the License.
             <plugin>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>slingfeature-maven-plugin</artifactId>
-                <version>0.2.1-SNAPSHOT</version>
+                <version>0.8.1-SNAPSHOT</version>
                 <extensions>true</extensions>
                 <executions>
                     <execution>
                         <id>aggregate-base-feature</id>
-                        <phase>generate-resources</phase>
                         <goals>
                             <goal>aggregate-features</goal>
                         </goals>
                         <configuration>
                             <aggregates>
-                                <directory>
-                                    <includes>*.json</includes>
-                                    <excludes>gogo.json</excludes>
-                                </directory>
+                                <aggregate>
+                                    <classifier>foo</classifier>
+                                    <filesInclude>**/*.json</filesInclude>
+                                    <filesExclude>**/gogo.json</filesExclude>
+                                </aggregate>
+                                <aggregate>
+                                    <classifier>bar</classifier>
+                                    <includeClassifier>foo</includeClassifier>
+                                    <filesInclude>**/gogo.json</filesInclude>
+                                </aggregate>
                             </aggregates>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>analyze</id>
+                        <goals>
+                            <goal>analyse-features</goal>
+                        </goals>
+                        <configuration>
+                          <scans>
+                              <scan>
+                                  <includeClassifier>foo</includeClassifier>
+                                  <includeTask>api-regions-check-order</includeTask>
+                                  <taskConfiguration>
+                                    <api-regions-check-order>
+                                      <order>deprecated,internal</order>
+                                    </api-regions-check-order>
+                                  </taskConfiguration>
+                              </scan>
+                          </scans>
+                        </configuration>
+                    </execution>
                 </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.sling</groupId>
-                        <artifactId>org.apache.sling.feature.extension.apiregions</artifactId>
-                        <version>0.0.1-SNAPSHOT</version>
-                    </dependency>
-                </dependencies>
             </plugin>
             <plugin>
                 <groupId>org.apache.rat</groupId>
