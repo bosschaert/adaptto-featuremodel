@@ -55,6 +55,10 @@ under the License.
                                     <includeClassifier>foo</includeClassifier>
                                     <filesInclude>**/gogo.json</filesInclude>
                                 </aggregate>
+                                <aggregate>
+                                    <classifier>tar</classifier>
+                                    <includeClassifier>foo</includeClassifier>
+                                </aggregate>
                             </aggregates>
                         </configuration>
                     </execution>
