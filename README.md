@@ -16,8 +16,8 @@ Launch the aggregate feature `webconsole.http`:
 
 ```
 rm -rf launcher && \
-java -jar ~/.m2/repository/org/apache/sling/org.apache.sling.feature.launcher/0.1.0-SNAPSHOT/org.apache.sling.feature.launcher-0.1.0-SNAPSHOT.jar \
-  -f mvn:org.apache.sling/org.apache.sling.featuremodel.example/0.0.1/slingosgifeature/webconsole.http
+java -jar ~/.m2/repository/org/apache/sling/org.apache.sling.feature.launcher/0.8.1-SNAPSHOT/org.apache.sling.feature.launcher-0.8.1-SNAPSHOT.jar \
+  -f mvn:org.apache.sling/org.apache.sling.featuremodel.example/0.0.1/slingosgifeature
 ```
 
 Now you can connect to the launched feature webconsole via http://localhost:8080/system/console
@@ -27,8 +27,8 @@ Also provide an override for the `http.port` variable:
 
 ```
 rm -rf launcher && \
-java -jar ~/.m2/repository/org/apache/sling/org.apache.sling.feature.launcher/0.1.0-SNAPSHOT/org.apache.sling.feature.launcher-0.1.0-SNAPSHOT.jar \
-  -f mvn:org.apache.sling/org.apache.sling.featuremodel.example/0.0.1/slingosgifeature/webconsole.http \
+java -jar ~/.m2/repository/org/apache/sling/org.apache.sling.feature.launcher/0.8.1-SNAPSHOT/org.apache.sling.feature.launcher-0.8.1-SNAPSHOT.jar \
+  -f mvn:org.apache.sling/org.apache.sling.featuremodel.example/0.0.1/slingosgifeature \
   -f mvn:org.apache.sling/org.apache.sling.featuremodel.example/0.0.1/slingosgifeature/gogo \
   -V http.port=9090
 ```
