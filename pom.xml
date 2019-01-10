@@ -60,6 +60,12 @@ under the License.
                                     <includeClassifier>foo</includeClassifier>
                                 </aggregate>
                             </aggregates>
+              <handlerConfiguration>
+                <APIRegionMergeHandler>
+                  <fileStorage>/Users/david/tmp/gen2</fileStorage>
+                </APIRegionMergeHandler>
+              </handlerConfiguration>
+                            
                         </configuration>
                     </execution>
                     <execution>
@@ -82,6 +88,14 @@ under the License.
                         </configuration>
                     </execution>
                 </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.sling</groupId>
+                        <artifactId>org.apache.sling.feature.extension.apiregions</artifactId>
+                        <version>0.0.1-SNAPSHOT</version>
+                    </dependency>
+                </dependencies>
+
             </plugin>
             <plugin>
                 <groupId>org.apache.rat</groupId>

@@ -11,6 +11,5 @@
         "org.apache.felix.http": {
             "org.osgi.service.http.port": "${http.port}"
         }
-    }
-    
+    }    
 }
