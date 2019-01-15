@@ -4,12 +4,17 @@
         "http.port":"8080"
     },
     "bundles": [
+        "com.adobe.granite:com.adobe.aem.configadminplugin.k8s:1.0.0-SNAPSHOT",
         "org.apache.felix:org.apache.felix.http.servlet-api:1.1.2",
-        "org.apache.felix:org.apache.felix.http.jetty:4.0.0"
+        "org.apache.felix:org.apache.felix.http.jetty:4.0.0",
+        "org.coderthoughts:recording-servlet:1.0.0-SNAPSHOT"
     ],
     "configurations": {
         "org.apache.felix.http": {
             "org.osgi.service.http.port": "${http.port}"
+        },
+        "org.coderthoughts.recordingservlet": {
+            "foo.foo": "$[secret:testfile.txt]"
         }
     }
     
