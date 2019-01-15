@@ -46,11 +46,32 @@ under the License.
                         </goals>
                         <configuration>
                             <aggregates>
-                                <directory>
+                                <aggregate>
+                                    <classifier>example-runtime</classifier>
                                     <filesInclude>*.json</filesInclude>
                                     <filesExclude>gogo.json</filesExclude>
-                                </directory>
+                                </aggregate>
                             </aggregates>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>verify-analyze</id>
+                        <phase>process-resources</phase>
+                        <goals><goal>analyse-features</goal></goals>
+                        <configuration>
+                            <framework>
+                                <groupId>org.apache.felix</groupId>
+                                <artifactId>org.apache.felix.framework</artifactId>
+                                <version>6.0.1</version>
+                            </framework>
+                            <scans>
+                                <scan>
+                                    <includeClassifier>example-runtime</includeClassifier>
+                                    <includeTasks>
+                                        <includeTask>bundle-packages</includeTask>
+                                    </includeTasks>
+                                </scan>
+                            </scans>
                         </configuration>
                     </execution>
                 </executions>
