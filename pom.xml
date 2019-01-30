@@ -50,6 +50,7 @@ under the License.
                                     <classifier>example-runtime</classifier>
                                     <filesInclude>*.json</filesInclude>
                                     <filesExclude>gogo.json</filesExclude>
+                                    <markAsComplete>true</markAsComplete>
                                 </aggregate>
                             </aggregates>
                         </configuration>
