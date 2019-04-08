@@ -3,7 +3,11 @@
 This page contains instructions on how to build and run the feature model example.
 
 ## First
-Clone and `mvn clean install` the following repo: https://github.com/apache/sling-org-apache-sling-feature-launcher
+Download the launcher:
+
+```
+curl http://repo1.maven.org/maven2/org/apache/sling/org.apache.sling.feature.launcher/1.0.0/org.apache.sling.feature.launcher-1.0.0.jar -O
+```
 
 ## Then 
 Build the feature model project.
@@ -16,7 +20,7 @@ Launch the aggregate feature `webconsole.http`:
 
 ```
 rm -rf launcher && \
-java -jar ~/.m2/repository/org/apache/sling/org.apache.sling.feature.launcher/0.8.1-SNAPSHOT/org.apache.sling.feature.launcher-0.8.1-SNAPSHOT.jar \
+java -jar org.apache.sling.feature.launcher-1.0.0.jar \
   -f mvn:org.apache.sling/org.apache.sling.featuremodel.example/0.0.1/slingosgifeature
 ```
 
