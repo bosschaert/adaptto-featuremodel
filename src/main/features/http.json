@@ -5,7 +5,7 @@
     },
     "bundles": [
         "org.apache.felix:org.apache.felix.http.servlet-api:1.1.2",
-        "org.apache.felix:org.apache.felix.http.jetty:4.0.0"
+        "org.apache.felix:org.apache.felix.http.jetty:4.0.10"
     ],
     "configurations": {
         "org.apache.felix.http": {
