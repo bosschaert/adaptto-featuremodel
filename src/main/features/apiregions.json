@@ -1,0 +1,9 @@
+{
+    "id": "${project.groupId}:${project.artifactId}:slingfeature:apiregions:${project.version}",
+    "bundles": [
+        "org.apache.sling:org.apache.sling.feature.apiregions:1.0.1-SNAPSHOT"
+    ],
+    "framework-properties": {
+        "org.apache.sling.feature.apiregions.regions": "*"
+    }
+}
