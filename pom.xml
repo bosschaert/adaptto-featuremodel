@@ -35,7 +35,7 @@ under the License.
             <plugin>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>slingfeature-maven-plugin</artifactId>
-                <version>0.8.1-SNAPSHOT</version>
+                <version>1.1.2</version>
                 <extensions>true</extensions>
                 <executions>
                     <execution>
@@ -60,11 +60,13 @@ under the License.
                                     <includeClassifier>foo</includeClassifier>
                                 </aggregate>
                             </aggregates>
+                            <!--
               <handlerConfiguration>
                 <APIRegionMergeHandler>
                   <fileStorage>/Users/david/tmp/gen2</fileStorage>
                 </APIRegionMergeHandler>
-              </handlerConfiguration>
+                                </handlerConfiguration>
+                            -->
                             
                         </configuration>
                     </execution>
@@ -92,7 +94,7 @@ under the License.
                     <dependency>
                         <groupId>org.apache.sling</groupId>
                         <artifactId>org.apache.sling.feature.extension.apiregions</artifactId>
-                        <version>0.0.1-SNAPSHOT</version>
+                        <version>1.0.4</version>
                     </dependency>
                 </dependencies>
 
