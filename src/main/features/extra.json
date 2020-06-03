@@ -1,0 +1,14 @@
+{
+    "id": "${project.groupId}:${project.artifactId}:slingfeature:extra:${project.version}",
+    "bundles": [
+        "org.apache.sling:org.apache.sling.feature.apiregions:1.1.2",
+        "org.osgi:org.osgi.service.cm:1.6.0"        
+    ],
+    "api-regions:JSON|false":[
+      {
+        "name":"global",
+        "exports":["lalala"
+        ]
+      }
+    ]
+}

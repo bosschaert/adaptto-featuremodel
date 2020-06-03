@@ -35,7 +35,7 @@ under the License.
             <plugin>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>slingfeature-maven-plugin</artifactId>
-                <version>1.0.0</version>
+                <version>1.1.17-SNAPSHOT</version>
                 <extensions>true</extensions>
                 <executions>
                     <execution>
@@ -70,12 +70,53 @@ under the License.
                                     <includeClassifier>example-runtime</includeClassifier>
                                     <includeTasks>
                                         <includeTask>bundle-packages</includeTask>
+                                        <includeTask>api-regions-duplicates</includeTask>
+                                        <includeTask>api-regions-crossfeature-dups</includeTask>
+                                        <!--  
+                                        <includeTask>api-regions-exportdups</includeTask>
+                                        -->
                                     </includeTasks>
+                                    <taskConfiguration>
+                                        <api-regions-crossfeature-dups>
+                                            <regions>foo,global</regions>
+                                        </api-regions-crossfeature-dups>
+                                        <api-regions-check-order>
+                                            <order>global,com.adobe.aem.deprecated,com.adobe.aem.internal</order>
+                                        </api-regions-check-order>
+                                    </taskConfiguration>                                    
                                 </scan>
                             </scans>
                         </configuration>
                     </execution>
+                    <!-- 
+                    <execution>
+                        <id>check-overlapping-exports</id>
+                        <goals><goal>api-regions-crossfeature-duplicates</goal></goals>
+                        <configuration>
+                            <selection>
+                                <filesInclude>*.json</filesInclude>
+                            </selection>
+                            <regions>
+                              <region>global</region>
+                              <region>foo</region>
+                            </regions>
+                            <packages>
+                                <ignore>javax.servletx</ignore>
+                                <ignore>javax.servletz</ignore>
+                                <warning>javax.servlett</warning>
+                            </packages>
+                        </configuration>
+                    </execution>
+                     -->
                 </executions>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.apache.sling</groupId>
+                                <artifactId>org.apache.sling.feature.extension.apiregions</artifactId>
+                                <version>1.1.3-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    
             </plugin>
             <plugin>
                 <groupId>org.apache.rat</groupId>
@@ -83,6 +124,7 @@ under the License.
                 <configuration>
                     <excludes>
                         <exclude>readme.md</exclude>
+                        <exclude>**/*.org</exclude>
                         <exclude>launcher/**</exclude>
                     </excludes>
                 </configuration>

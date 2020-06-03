@@ -12,5 +12,4 @@
             "org.osgi.service.http.port": "${http.port}"
         }
     }
-    
 }
