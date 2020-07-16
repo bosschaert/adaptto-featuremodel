@@ -35,7 +35,7 @@ under the License.
             <plugin>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>slingfeature-maven-plugin</artifactId>
-                <version>1.3.8</version>
+                <version>1.3.9-SNAPSHOT</version>
                 <extensions>true</extensions>
                 <executions>
                     <execution>
@@ -57,7 +57,7 @@ under the License.
                     </execution>
                     <execution>
                         <id>verify-analyze</id>
-                        <phase>process-resources</phase>
+                        <phase>verify</phase>
                         <goals><goal>analyse-features</goal></goals>
                         <configuration>
                             <framework>
@@ -70,6 +70,7 @@ under the License.
                                     <includeClassifier>example-runtime</includeClassifier>
                                     <includeTasks>
                                         <includeTask>bundle-packages</includeTask>
+                                        <includeTask>requirements-capabilities</includeTask>
                                     </includeTasks>
                                 </scan>
                             </scans>
